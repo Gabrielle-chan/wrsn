@@ -10,7 +10,10 @@ public Net(int x)
 	  Sensor_num=x;
 	  n=new Sensor[Sensor_num];   
 	  for(int i=0;i<Sensor_num;i++)
-	  {n[i]=new Sensor();}
+	  {
+		  n[i]=new Sensor();
+		  n[i].set_id(i);
+	  }
 	}
 	
 
