@@ -7,6 +7,7 @@ public  int position_y;
 public  int cluster_id;  
     float rate;
     float energy;
+public int  nghb_num=0;
   public Sensor()
     {
 	   position_x=1+(int)(Math.random()*100);
