@@ -42,7 +42,7 @@ public class K_means {
 					int cy=centroid[j].position_y;
 				//	System.out.println(cy);
 					double distance= Math.pow(ix-cx, 2)+Math.pow(iy-cy,2);
-			//		System.out.println("distance is "+distance);
+				//	System.out.println("distance is "+distance);
 					if(j==0) 
 					{
 						t=distance;
@@ -89,7 +89,7 @@ public class K_means {
 					total_y +=c[(int)((ArrayList)a.get(mm)).get(i2)].position_y;
 					
 				}
-					//avg就是平均数
+					//avg灏辨槸骞冲潎鏁�
 				ave_x[mm]=total_x/((ArrayList)a.get(mm)).size();
 				
 				ave_y[mm]=total_y/((ArrayList)a.get(mm)).size();
@@ -158,10 +158,8 @@ public class K_means {
 		K_means kk=new K_means();
 		kk.k=8;
 		
-		
-		
-		ScatterPlot.data("节点分布图",net.n );
-		ScatterPlot.data("簇头分布", kk.convengence(net.n));
+		ScatterPlot.data("鑺傜偣鍒嗗竷鍥�",net.n );
+		ScatterPlot.data("绨囧ご鍒嗗竷", kk.convengence(net.n));
 
 		
 

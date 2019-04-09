@@ -7,6 +7,7 @@ public class CRNN {
 	public ArrayList a=new ArrayList();; //save the anchor
 	public ArrayList b; //save the nodes
 	public float r;
+
 	private void find_anchor(ArrayList s)  
 	{	
 	/*	ArrayList b=new ArrayList();
@@ -31,8 +32,8 @@ public class CRNN {
 				
 			int t=((Sensor)s.get(0)).nghb_num;
 			int t_id=((Sensor)s.get(0)).get_id();
-			int an_x=0;
-			int an_y=0;
+			int an_x=((Sensor)s.get(0)).position_x;
+			int an_y=((Sensor)s.get(0)).position_y;
 			int p=0;//save the position of anchor in arraylist s;
 			//find the anchor
 			for(int j=1;j<s.size();j++)
@@ -88,7 +89,8 @@ public class CRNN {
 			if(s.size()==0)
 			{
 				System.out.println("CRNN is end.");
-				System.out.print("Anchors are ");
+				
+				System.out.print(a.size()+" Anchors are ");
 				for(int aai=0;aai<a.size();aai++)
 					{
 						System.out.print(((Sensor)a.get(aai)).get_id()+" ");
@@ -132,7 +134,7 @@ public class CRNN {
 					((Sensor)b.get(i)).nghb_num++;
 				}
 			}
-		System.out.println("sensor "+((Sensor)b.get(i)).get_id()+"'s nghb_num is "+((Sensor)b.get(i)).nghb_num);
+	//	System.out.println("sensor "+((Sensor)b.get(i)).get_id()+"'s nghb_num is "+((Sensor)b.get(i)).nghb_num);
 		}
 	};
 	public CRNN(Sensor [] s,float x)
@@ -155,9 +157,11 @@ public class CRNN {
 	public static void main(String[] args) {
 		
 		// TODO Auto-generated method stub
-		Net net=new Net(15);
-		CRNN crnn=new CRNN(net.n,20);
-	
+		Net net=new Net(25);
+		CRNN crnn=new CRNN(net.n,5);
+		K_means kk=new K_means();
+		kk.k=8;
+		kk.convengence(net.n);
 	
 	}
 
