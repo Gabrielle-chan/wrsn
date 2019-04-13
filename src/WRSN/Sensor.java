@@ -10,7 +10,10 @@ public  int cluster_id;
     float energy;
 //neighbor   
 public int  nghb_num=0;
-private int onehop [];
+public int [] s_r;    //save the receive sensors
+public int [] s_t;	// //save the transport sensors
+
+
 //id of sensor
 private int id=0;
 
@@ -22,6 +25,14 @@ public void set_id(int x)
 {
 	id=x;
 }
+//power
+private float p=0,pr=0,pt=0;
+public void set_power(float p1,float p2) {
+this.pr=p1;
+this.pt=p2;
+this.p=pr+pt;
+}
+
 public Object clone() {  
     Sensor ss = null;  
     try{  
@@ -31,6 +42,8 @@ public Object clone() {
     }  
     return ss ;  
 }
+
+
 
   public Sensor()
     {
