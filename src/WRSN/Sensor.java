@@ -1,6 +1,6 @@
 package WRSN;
 import java.lang.Math;
-public class Sensor {
+public class Sensor implements Cloneable {
 //position
 public	int position_x;
 public  int position_y;
@@ -22,6 +22,16 @@ public void set_id(int x)
 {
 	id=x;
 }
+public Object clone() {  
+    Sensor ss = null;  
+    try{  
+        ss = (Sensor)super.clone();  
+    }catch(CloneNotSupportedException e) {  
+        e.printStackTrace();  
+    }  
+    return ss ;  
+}
+
   public Sensor()
     {
 	   position_x=1+(int)(Math.random()*50);
