@@ -1,17 +1,18 @@
 package WRSN;
 import java.lang.Math;
+import java.util.ArrayList;
 public class Sensor implements Cloneable {
 //position
 public	int position_x;
 public  int position_y;
 //cluster id
 public  int cluster_id;  
-    float rate;
-    float energy;
+//initial energy is 2
+float energy=2;
 //neighbor   
 public int  nghb_num=0;
-public int [] s_r;    //save the receive sensors
-public int [] s_t;	// //save the transport sensors
+public ArrayList  s_r=new ArrayList(0);    //save the receive sensors
+public ArrayList  s_t=new ArrayList(0);	// //save the transport sensors
 
 
 //id of sensor
@@ -26,7 +27,7 @@ public void set_id(int x)
 	id=x;
 }
 //power
-private float p=0,pr=0,pt=0;
+public float p=0,pr=0,pt=0;
 public void set_power(float p1,float p2) {
 this.pr=p1;
 this.pt=p2;

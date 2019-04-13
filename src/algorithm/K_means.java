@@ -6,8 +6,8 @@ import WRSN.*;
 public class K_means {
 
 	public int k;
-	 int centers[];
-	 ArrayList a;   //save k clusters
+	 public int centers[];
+	public  ArrayList a;   //save k clusters
 	public Sensor [] convengence(Sensor[] x)
 		{   
 			

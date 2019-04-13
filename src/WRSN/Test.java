@@ -1,15 +1,14 @@
 package WRSN;
 
+import java.util.ArrayList;
+
 public class Test {
 	
 	
-	int a[]=new int[3];
+	public ArrayList  s_r=new ArrayList();
     public void dddTest(int n)
     {
-    	for(int i=0;i<3;i++)
-    	{
-    		a[i]=n;
-    	}
+    	
     	
     }
 	
@@ -17,6 +16,7 @@ public class Test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 			Test t=new Test();
+		System.out.println(Math.pow(10, -1));	
 			
 	}
 
