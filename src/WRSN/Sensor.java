@@ -27,11 +27,16 @@ public void set_id(int x)
 	id=x;
 }
 //power
-public float p=0,pr=0,pt=0;
+public float p=0,pr=0,pt=0,ps=0;
 public void set_power(float p1,float p2) {
 this.pr=p1;
 this.pt=p2;
 this.p=pr+pt;
+}
+
+public void set_charge(float pss)
+{   ps=pss;
+	
 }
 
 public Object clone() {  
@@ -54,6 +59,16 @@ public Object clone() {
 	  // System.out.println(position_y); 
 	 
 	};
+	  public Sensor(int x)
+	    {  if(x==0)
+	    {
+		   position_x=1+(int)(Math.random()*50);
+		   position_y=1+(int)(Math.random()*50);
+	      // System.out.println(position_x+":"+position_y);
+		  // System.out.println(position_y); 
+	    }
+		};
+
   
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

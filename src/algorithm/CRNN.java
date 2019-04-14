@@ -95,6 +95,7 @@ public class CRNN {
 					{
 						System.out.print(((Sensor)a.get(aai)).get_id()+" ");
 					}
+				System.out.println("");
 			}
 			//if not end print the left list
 			else
@@ -159,9 +160,9 @@ public class CRNN {
 		// TODO Auto-generated method stub
 		Net net=new Net(25);
 		CRNN crnn=new CRNN(net.n,5);
-		K_means kk=new K_means();
-		kk.k=8;
-		kk.convengence(net.n);
+	//	K_means kk=new K_means();
+		//kk.k=8;
+		//kk.convengence(net.n);
 	
 	}
 
